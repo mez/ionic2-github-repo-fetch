@@ -5,7 +5,7 @@
 If you have never looked at ionic 2, I highly recommend going to their site and doing the quick [tutorial](http://ionicframework.com/docs/v2/getting-started/tutorial/).
 
 This demo ionic 2 app fetches the repos of a github user, then displays them 
-as a list of cards. 
+as a list of cards.
 
 Each card shows the title and HUD of icons for common repo metrics. You can click on the card to view the github repo page via InAppBrowser cordova plugin.
 
@@ -31,5 +31,6 @@ I do want to give a S/O to @ashteya for [ionic2-tutorial-github](https://github.
 
 #Possible future updates
 * replace html templates with jade.
+* add tests to show examples of testing.
 
 ###### Open an issue if you want to see something added or have any questions/suggestions!
