@@ -1,0 +1,30 @@
+<ion-navbar *navbar>
+  <ion-title>
+    GitHub Repo Fetcher
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+
+  <ion-list inset>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="logo-github"></ion-icon>
+        Username
+      </ion-label>
+      <ion-input [(ngModel)]="username" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button 
+      block 
+      [disabled]="username == null || username.length == 0" 
+      (click)="getRepos()"> 
+        Search
+    </button>
+  </div>
+
+  <github-repo [repo]="repo" *ngFor="let repo of foundRepos"></github-repo>
+
+</ion-content>
