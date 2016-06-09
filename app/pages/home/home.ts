@@ -11,7 +11,10 @@ export class HomePage {
 	public foundRepos;
 	public username;
 
-  constructor(private github: GithubService) { }
+  constructor(private github: GithubService) { 
+		this.username = 'driftyco';
+		this.getRepos();
+  }
 
   getRepos() {
 		this.github.getRepos(this.username).subscribe(

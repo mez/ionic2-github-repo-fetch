@@ -5,35 +5,35 @@ import {GithubRepo} from "./github-repo.model";
 @Component({
 	selector: 'github-repo',
 	template:`
-	<ion-card class="repo" (click)="launch()">
+	<ion-card class="github-repo" (click)="launch()">
 		<ion-card-header>
       <div text-center>{{repo.name}} </div>
     </ion-card-header>
 
-		<ion-item>
+		<ion-item detail-none>
 			<ion-row>
 	    	<ion-col width-25>
 			    <button dark clear item-left padding-left>
-			      <ion-icon style="font-size:1.8em;" name="star"></ion-icon>
-			      <div>{{repo.stargazers_count}}</div>
+			      <ion-icon name="star"></ion-icon>
+			      {{repo.stargazers_count}}
 			    </button>
 				</ion-col>
 				<ion-col width-25>
 			    <button dark clear item-left>
-			      <ion-icon style="font-size:1.8em;" name="eye"></ion-icon>
-			      <div>{{repo.watchers}}</div>
+			      <ion-icon name="eye"></ion-icon>
+			      {{repo.watchers}}
 			    </button>
 			  </ion-col>
 			  <ion-col width-25>
 			    <button dark clear item-left>
-			      <ion-icon style="font-size:1.8em;" name="information-circle-outline"></ion-icon>
-			      <div>{{repo.open_issues}}</div>
+			      <ion-icon name="information-circle-outline"></ion-icon>
+			      {{repo.open_issues}}
 			    </button>
 			  </ion-col>
 			  <ion-col width-25>
 			    <button dark clear item-left>
-			      <ion-icon style="font-size:1.8em;" name="git-network"></ion-icon>
-			      <div>{{repo.forks}}</div>
+			      <ion-icon name="git-network"></ion-icon>
+			      {{repo.forks}}
 			    </button>
 			  </ion-col>
 			</ion-row>
