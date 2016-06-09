@@ -1,18 +1,17 @@
 import {Page} from "ionic-angular";
-import {GitHubService} from "../../services/github";
-import {GitHubRepoComponent} from "../github/githubrepo";
-
+import {GithubService} from "../../services/github.service";
+import {GithubRepoComponent} from "../../components/github-repo/github-repo.component";
 
 @Page({
   templateUrl: 'build/pages/home/home.html',
-  providers: [GitHubService],
-  directives: [GitHubRepoComponent]
+  providers: [GithubService],
+  directives: [GithubRepoComponent]
 })
 export class HomePage {
 	public foundRepos;
 	public username;
 
-  constructor(private github: GitHubService) {}
+  constructor(private github: GithubService) { }
 
   getRepos() {
 		this.github.getRepos(this.username).subscribe(

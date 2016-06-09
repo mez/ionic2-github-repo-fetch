@@ -1,9 +1,8 @@
 import {Injectable} from "@angular/core";
 import {Http, Headers} from "@angular/http";
-import {Repo} from "../pages/github/repo"
 
 @Injectable()
-export class GitHubService {
+export class GithubService {
 	constructor(private http: Http){}
 
 	getRepos(username: string) {

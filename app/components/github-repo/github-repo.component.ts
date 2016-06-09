@@ -1,6 +1,6 @@
 import {Component, Input} from "@angular/core";
 import {InAppBrowser} from "ionic-native";
-import {Repo} from "./repo";
+import {GithubRepo} from "./github-repo.model";
 
 @Component({
 	selector: 'github-repo',
@@ -42,8 +42,8 @@ import {Repo} from "./repo";
 	`
 })
 
-export class GitHubRepoComponent {
-	@Input() repo: Repo;
+export class GithubRepoComponent {
+	@Input() repo: GithubRepo;
 	
 	launch() {
 		console.info("Launch: ", this.repo.html_url);

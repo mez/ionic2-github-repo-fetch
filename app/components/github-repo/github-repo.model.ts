@@ -1,4 +1,4 @@
-export class Repo {
+export class GithubRepo {
 	name: string;
 	html_url: string;
 	stargazers_count: number;
